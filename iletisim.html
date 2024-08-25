@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim Formu</title>
+    <style>
+        /* Genel Sayfa Stilleri */
+        
+        body {
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/803/792/desktop-wallpaper-coffee-backgrounds-black-coffee.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #f9f9f9;
+            /* Arka plan rengi */
+            color: #333;
+            /* Yazı rengi */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* İletişim Formu Stilleri */
+        
+        #contactForm {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            /* Form arka plan rengi ve opaklık */
+        }
+        /* İletişim Formu Alanları */
+        
+        #contactForm input[type="text"],
+        #contactForm input[type="email"],
+        #contactForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        /* Gönderme Düğmesi */
+        
+        #contactForm button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Gönderme Düğmesi Hover */
+        
+        #contactForm button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+
+            <ul>
+                <li><a href="index.html">Anasayfa</a></li>
+
+
+            </ul>
+            <div class="profile-icon">
+                <a href="login.html">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+
+        </head>
+
+        <form id="contactForm">
+            <input type="text" id="name" name="name" placeholder="İsim ve Soyisim" required>
+            <input type="email" id="email" name="email" placeholder="E-posta" required>
+            <input type="text" id="subject" name="subject" placeholder="Konu" required>
+            <textarea id="message" name="message" placeholder="Mesajınız" required></textarea>
+            <button type="submit">Gönder</button>
+        </form>
+        <script>
+            document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Formun gönderimini engelle
+
+                // Form alanlarını kontrol et
+                var name = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var subject = document.getElementById("subject").value;
+                var message = document.getElementById("message").value;
+
+                if (name === "" || email === "" || subject === "" || message === "") {
+                    alert("Lütfen tüm alanları doldurun.");
+                    return false; // Form gönderimini iptal et
+                }
+
+                // Form verilerini işle veya gönder
+                // Burada sunucuya gönderme veya başka işlemler yapılabilir
+                console.log("Form verileri:", name, email, subject, message);
+
+                // Gönderim sonrası mesaj veya yönlendirme
+                alert("Mesajınız başarıyla gönderildi.");
+
+                // Formu gerçekten gönder
+                this.submit();
+            });
+        </script>
+</body>
+
+</html>

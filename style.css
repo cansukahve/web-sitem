@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0od;
+    font-family: Arial, sans-serif;
+    background-image: url(https://aarukas.files.wordpress.com/2014/04/tumblr_n2stg2pbwv1saz9meo2_1280.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    color: #ccc;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin: 0 auto;
+    animation: rainbowText 5s infinite;
+    /* 5 saniyede bir tekrar eden bir animasyon */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* Kenar yuvarlatma ekleyelim */
+    background-color: C38154;
+    /* Arka plan rengi */
+    transition: background-color 0.3s ease;
+    /* Arka plan rengi için geçiş efekti */
+}
+
+nav ul li a:hover {
+    background-color: #b34e00;
+    /* Mouse üzerine gelindiğinde değişecek arka plan rengi */
+    color: #fff;
+    /* Yazı rengini beyaza çevirelim */
+}
+
+nav ul li.active a {
+    background-color: #30d413;
+    /* Aktif sayfa için arka plan rengi */
+}
+
+nav ul li a i {
+    margin-right: 5px;
+    /* İkon ile metin arasına boşluk ekleyelim */
+}
+
+nav ul li a .badge {
+    background-color: red;
+    /* Bildirim rozetinin arka plan rengi */
+    color: #fff;
+    /* Yazı rengini beyaza çevirelim */
+    border-radius: 50%;
+    /* Rozetin kenarını yuvarlayalım */
+    padding: 2px 5px;
+    /* Rozetin içerisindeki yazının kenar boşluğu */
+    font-size: 12px;
+    /* Yazı boyutunu ayarlayalım */
+}
+
+h1 {
+    color: F9E0BB;
+    text-align: center;
+}
+
+.profile-icon {
+    display: inline-block;
+    margin-left: auto;
+}
